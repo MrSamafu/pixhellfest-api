@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="signin">
+            <div class="content">
+                <h2>Create Account</h2>
+                <div class="form">
+                    <div class="inputBox">
+                        <input type="text" required> <i>Username</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required> <i>Adresse Email</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required> <i>Password</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required> <i>Re:Password</i>
+                    </div>
+                    <div class="links"> <a href="/"><- Back</a>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Login">
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

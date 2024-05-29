@@ -15,4 +15,9 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
+    #[Route('/createAccount')]
+    public function createAccount(): Response
+    {
+        return $this->render("home/createAccount.html.twig");
+    }
 }
