@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="signin">
+        <div class="content">
+            <h2>Create Account</h2>
+            {% if errorMsg is defined %}
+                <ul>
+                    {% for msg in errorMsg%}
+                        <li>msg</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <form class="form" action="/createAccount" method="post">
+                <div class="inputBox">
+                    <input type="text" name="username" required> <i>Username</i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="email" required> <i>Adresse Email</i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required> <i>Password</i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="repassword" required> <i>Re:Password</i>
+                </div>
+                <div class="links"> <a href="/"><- Back</a>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
